@@ -6,6 +6,7 @@ let rows = [];
 let squares = [];
 for (let i = 0; i < 4; i++) {
     rows[i] = document.createElement("div");
+    rows[i].classList.add("row");
     container.appendChild(rows[i]);
     squares[i] = [];
     for (let j = 0; j < 4; j++) {
