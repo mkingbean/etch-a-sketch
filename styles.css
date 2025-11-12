@@ -1,6 +1,8 @@
 .container {
     width: 25%;
     margin: auto;
+    border: 5px solid black;
+    aspect-ratio: 1/1;
 }
 
 .row {
