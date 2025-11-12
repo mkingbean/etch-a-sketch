@@ -24,9 +24,18 @@ function deleteGrid() {
 }
 
 function requestInput() {
-    let size = prompt("Please enter a grid size");
-    deleteGrid();
-    generateGrid(size);
+    let size;
+    while (true) {
+        if (1 <= size && size <= 100) {
+            deleteGrid();
+            generateGrid(size);
+            break;
+        } else if (size === null) {
+            break;
+        } else {
+            size = prompt("Please enter a grid size between 1 and 100");
+        }
+    }
 }
 
 button = document.querySelector(".btn");
@@ -35,3 +44,4 @@ button.addEventListener("click", requestInput);
 container = document.querySelector(".container");
 let rows = [];
 let squares = [];
+generateGrid(4);
