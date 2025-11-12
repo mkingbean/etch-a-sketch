@@ -1,5 +1,3 @@
-// Create a 16x16 grid of divs
-
 let container = document.querySelector(".container");
 
 function paintSquare(e) {
