@@ -19,6 +19,14 @@ function generateGrid(size) {
 
 function deleteGrid() {
     rows.forEach((row) => container.removeChild(row));
+    rows = [];
+    squares = [];
+}
+
+function popup() {
+    let size = prompt("Please enter a grid size");
+    deleteGrid();
+    generateGrid(size);
 }
 
 container = document.querySelector(".container");
