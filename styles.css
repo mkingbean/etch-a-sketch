@@ -1,3 +1,7 @@
+.container {
+    width: 25%;
+    margin: auto;
+}
 .row {
     display: flex;
     justify-content: stretch;
