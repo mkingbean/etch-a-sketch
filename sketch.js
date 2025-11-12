@@ -23,11 +23,14 @@ function deleteGrid() {
     squares = [];
 }
 
-function popup() {
+function requestInput() {
     let size = prompt("Please enter a grid size");
     deleteGrid();
     generateGrid(size);
 }
+
+button = document.querySelector(".btn");
+button.addEventListener("click", requestInput);
 
 container = document.querySelector(".container");
 let rows = [];
