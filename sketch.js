@@ -2,15 +2,15 @@
 
 let container = document.querySelector(".container");
 
-let columns = [];
+let rows = [];
 let squares = [];
 for (let i = 0; i < 4; i++) {
-    columns[i] = document.createElement("div");
-    container.appendChild(columns[i]);
+    rows[i] = document.createElement("div");
+    container.appendChild(rows[i]);
     squares[i] = [];
     for (let j = 0; j < 4; j++) {
         squares[i][j] = document.createElement("div");
         squares[i][j].classList.add("square");
-        columns[i].appendChild(squares[i][j]);
+        rows[i].appendChild(squares[i][j]);
     }
 }
