@@ -1,12 +1,8 @@
-let container = document.querySelector(".container");
-
 function paintSquare(e) {
     e.target.classList.add("painted");
 }
 
 function generateGrid(size) {
-    let rows = [];
-    let squares = [];
     for (let i = 0; i < size; i++) {
         rows[i] = document.createElement("div");
         rows[i].classList.add("row");
@@ -20,3 +16,11 @@ function generateGrid(size) {
         }
     }
 }
+
+function deleteGrid() {
+    rows.forEach((row) => container.removeChild(row));
+}
+
+container = document.querySelector(".container");
+let rows = [];
+let squares = [];
