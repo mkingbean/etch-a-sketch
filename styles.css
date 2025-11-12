@@ -9,7 +9,6 @@
 }
 
 .square {
-    border: 2px solid red;
     aspect-ratio: 1/1;
     flex: 1 1 0;
 }
