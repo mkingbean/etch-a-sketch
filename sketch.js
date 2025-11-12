@@ -10,6 +10,7 @@ for (let i = 0; i < 4; i++) {
     squares[i] = [];
     for (let j = 0; j < 4; j++) {
         squares[i][j] = document.createElement("div");
+        squares[i][j].classList.add("square");
         columns[i].appendChild(squares[i][j]);
     }
 }
