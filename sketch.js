@@ -3,7 +3,11 @@ function randomColourValue() {
 }
 
 function paintSquare(e) {
-    e.target.style.backgroundColor = `rgb(${randomColourValue()}, ${randomColourValue()}, ${randomColourValue()})`;
+    let square = e.target;
+    square.style.backgroundColor = `rgb(${randomColourValue()}, ${randomColourValue()}, ${randomColourValue()})`;
+    if (+square.style.opacity <= 1) {
+        square.style.opacity = +square.style.opacity + 0.1;
+    }
 }
 
 function generateGrid(size) {
