@@ -5,7 +5,7 @@ function randomColourValue() {
 function paintSquare(e) {
     let square = e.target;
     square.style.backgroundColor = `rgb(${randomColourValue()}, ${randomColourValue()}, ${randomColourValue()})`;
-    if (+square.style.opacity <= 1) {
+    if (+square.style.opacity < 1) {
         square.style.opacity = +square.style.opacity + 0.1;
     }
 }
@@ -46,10 +46,11 @@ function requestInput() {
     }
 }
 
-button = document.querySelector(".btn");
+const button = document.querySelector(".btn");
+const container = document.querySelector(".container");
+
 button.addEventListener("click", requestInput);
 
-container = document.querySelector(".container");
 let rows = [];
 let squares = [];
 generateGrid(4);
