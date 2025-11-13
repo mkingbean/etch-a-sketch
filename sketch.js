@@ -1,5 +1,9 @@
+function randomColourValue() {
+    return Math.floor(Math.random() * 256);
+}
+
 function paintSquare(e) {
-    e.target.classList.add("painted");
+    e.target.style.backgroundColor = `rgb(${randomColourValue()}, ${randomColourValue()}, ${randomColourValue()})`;
 }
 
 function generateGrid(size) {
